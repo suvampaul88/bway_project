@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bway Dashboard</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="header-text title is-1">Show's Financial Performance</h1>
+    </header>
+    <main class="main-content">
+      <div id="grossRevChart" class="grossRevChart">
+        <div class="gr-titleandinfo">
+        <h1 class="header-text title is-4">Revenue, by Show Week</h1>
+        <p>This chart shows total gross revenue by show week.
+        We define a new variable, purchase type, and we consider tickets purchased week of show or 1 week before to be "last minute sale",
+        and 2+ weeks before to be "advance sale". Weekly gross revenue is broken out by this purchase type variable.</p>
+        <button class="button is-info is-small gr-info-tooltip">Legend Info
+              <span class="gr-info-tooltiptext">Click on legend values to add/remove lines from chart</span>
+        </button>
+    </div>
+        <div id="tooltip" class="tooltip">
+          <div class="tooltip-show">
+             Show Week:  <span id="show"></span>
+          </div>
+          <div class="advance-sale">
+             % of Revenue, Advanced Sales: <span id="adv-sale"></span>
+        </div>
+        <div class="last-minute-sale">
+            % of Revenue, Last Minute Sales: <span id="last-minute-sale"></span>
+        </div>
+        </div>
+      </div>
+      <div id="percRevChart" class="percRevChart">
+          <div class="pr-titleandinfo">
+              <h1 class="header-text title is-4">Revenue Breakdown by Purchase Type and Show Week</h1>
+              <p>This chart shows percent of gross revenue from advance ticket sales versus last minute ticket sales for each show week, and how that distribution changes over the course of a show's run.
+                It also provides an oppoportunity to interactively explore the data! <br>
+                 What if we change our assumption that tickets purchased week of show or 1 week before is a last minute sale? <br>
+                 What if last minute ticket sales only count week-of-show purchases? What if last minute purchases are anything sold within 2 weeks prior to the show?
+                 How does the distribution of purchase type over the show run change if we change our assumptions?</p>
+              <button class="button is-info is-small pr-info-tooltip">Buttons Info
+                  <span class="pr-info-tooltiptext">Click on button to change what counts as advance ticket sale/last minute ticket sale</span>
+                </button>
+          </div>
+          <div id='bucketButtons'></div>
+      </div>
+    </main>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

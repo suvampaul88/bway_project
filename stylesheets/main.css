@@ -1,0 +1,176 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+.grossRevChart, .percRevChart {
+    position: relative;
+}
+
+.grossRevChart {
+  grid-area: gr;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+
+.gr-titleandinfo, .pr-titleandinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 800px;
+}
+
+p {
+  padding-bottom: 10px;
+}
+
+.gr-info-tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.button.gr-info-tooltip .gr-info-tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  text-align: left;
+  width: 300px;
+  height: 30px;
+  padding: 5px;
+  font: 12px sans-serif;
+  color: white;
+  background: #7c868e;
+  border: 0px;
+  border-radius: 2px;
+}
+
+.button.gr-info-tooltip:hover .gr-info-tooltiptext {
+  visibility: visible;
+}
+
+
+.pr-info-tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.button.pr-info-tooltip .pr-info-tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  text-align: left;
+  width: 450px;
+  height: 30px;
+  padding: 5px;
+  font: 12px sans-serif;
+  color: white;
+  background: #7c868e;
+  border: 0px;
+  border-radius: 2px;
+}
+
+.button.pr-info-tooltip:hover .pr-info-tooltiptext {
+  visibility: visible;
+}
+
+.button.is-small.saletype {
+    background-color: lightgrey !important;
+    border-color: white !important;
+    border-width: 5px !important;
+
+}
+
+
+#bucketButtons {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.percRevChart {
+  grid-area: pr;
+  padding: 40px;
+}
+
+/*axis formatting*/
+.tick text {
+  fill: #303030;
+  font-size: 15px;
+}
+
+.axis line{
+  stroke: #C8C8C8;
+}
+
+.axis path {
+   display: none;
+}
+
+
+/*tooltips*/
+.listening-rect {
+    fill: transparent;
+}
+
+
+.tooltip {
+  opacity: 0;
+  position: absolute;
+  top: -14px;
+  left: 0;
+  padding: 0.6em 1em;
+  background: #fff;
+  text-align: center;
+  line-height: 1.4em;
+  font-size: 0.9em;
+  border: 1px solid #ddd;
+  z-index: 10;
+  transition: all 0.1s ease-out;
+  pointer-events: none;
+}
+
+.tooltip:before {
+  content: '';
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform-origin: center center;
+  z-index: 10;
+}
+
+.tooltip-show {
+  margin-bottom: 0.2em;
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+
+.listening-rect {
+  fill: transparent;
+}
+
+
+
+.advance-sale {
+  color: #FFC20A
+}
+
+.last-minute-sale {
+  color: #0C7BDC
+}

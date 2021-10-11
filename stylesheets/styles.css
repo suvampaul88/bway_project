@@ -1,0 +1,14 @@
+@import "header.css";
+@import "main.css";
+
+body {
+   font-size: 82.5%;
+   background: white;
+   display:grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: 150px auto;
+   grid-template-areas:
+      "hd hd hd hd hd hd hd hd"
+      "gr gr gr gr gr gr gr gr"
+      "pc pc pc pc pc pc pc pc"
+}

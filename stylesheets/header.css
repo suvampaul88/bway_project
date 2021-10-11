@@ -1,0 +1,11 @@
+.main-header {
+    background: #66ddaa;
+    grid-area: hd;
+  }
+
+  .header-text {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+
+  }
