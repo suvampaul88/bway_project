@@ -498,7 +498,7 @@ function assembleCharts() {
 
     async function getData() {
 
-        const allDataset = await d3.json("javascript_wrangling.json")
+        const allDataset = await d3.json("bway_test.json")
 
         const dataset = allDataset.filter(sale => sale.show_week <= 12);
 
